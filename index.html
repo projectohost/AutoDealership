@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarLux - Автосалон</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Іконки Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Навігація -->
+    <header>
+        <div class="logo"><i class="fa-solid fa-car-side"></i> CarLux</div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i> Головна</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Каталог</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Про нас</a></li>
+                <li><a href="#"><i class="fa-solid fa-truck"></i> Доставка</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Товари</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        
-    </body>
+    <!-- Головний банер -->
+    <section class="hero">
+        <h1>Авто твоєї мрії чекає на тебе</h1>
+        <p>Електрокари, спорткари та позашляховики з доставкою по Україні</p>
+        <a href="#" class="btn">Переглянути каталог</a>
+    </section>
+
+    <!-- Категорії авто -->
+    <section class="categories">
+        <div class="category electric">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Електрокари</h3>
+            <p>Сучасні та екологічні авто для міста і подорожей.</p>
+        </div>
+        <div class="category sport">
+            <i class="fa-solid fa-flag-checkered"></i>
+            <h3>Спорткари</h3>
+            <p>Швидкість, стиль та драйв для справжніх фанатів.</p>
+        </div>
+        <div class="category suv">
+            <i class="fa-solid fa-truck-monster"></i>
+            <h3>Позашляховики</h3>
+            <p>Міць і комфорт для будь-яких доріг та пригод.</p>
+        </div>
+    </section>
+
+    <!-- Відгуки -->
+    <section class="reviews">
+        <h2>Відгуки клієнтів</h2>
+        <div class="review-list">
+            <div class="review">
+                <p>"Замовив Tesla – доставили швидко, все супер!"</p>
+                <span>- Андрій</span>
+            </div>
+            <div class="review">
+                <p>"Ferrari в ідеальному стані. Дякую за сервіс!"</p>
+                <span>- Олена</span>
+            </div>
+            <div class="review">
+                <p>"Мій новий Jeep – справжній звір на дорозі."</p>
+                <span>- Дмитро</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал -->
+    <footer>
+        <p>Контакти: +380 97 123 45 67 | carlux@gmail.com</p>
+        <p>© 2025 CarLux. Усі права захищено.</p>
+    </footer>
+</body>
 </html>
