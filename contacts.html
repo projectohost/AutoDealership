@@ -1,15 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./contact.css">
+    <title>Контакти - Автосалон</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div>
-        
-    </div>
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h1 class="section-title">Контакти</h1>
+                <p class="section-subtitle">Зв'яжіться з нами для консультації та купівлі автомобіля вашої мрії</p>
+            </div>
+
+            <div class="contacts-content">
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Наша адреса</h3>
+                        <p>вул. Автомобільна, 25<br>Київ, 02000, Україна</p>
+                    </div>
+
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Телефон</h3>
+                        <p>+38 (044) 123-45-67<br>+38 (067) 890-12-34</p>
+                        <button class="call-btn" onclick="makeCall('+380441234567')">
+                            <i class="fas fa-phone"></i> Зателефонувати
+                        </button>
+                    </div>
+
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@autosalon.ua<br>sales@autosalon.ua</p>
+                    </div>
+
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Режим роботи</h3>
+                        <p>Пн-Пт: 09:00 - 19:00<br>Сб-Нд: 10:00 - 17:00</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-left">
+                    <h2>Швидкий зв'язок</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Ваше ім'я</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Телефон</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Оберіть послугу</option>
+                                <option value="buy">Купівля автомобіля</option>
+                                <option value="sell">Продаж автомобіля</option>
+                                <option value="trade">Трейд-ін</option>
+                                <option value="service">Сервісне обслуговування</option>
+                                <option value="consultation">Консультація</option>
+                            </select>
+                            <label for="service">Послуга</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="message">Повідомлення</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Відправити заявку</span>
+                            <span class="btn-loader">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section" data-aos="fade-up">
+                <h2>Як нас знайти</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Інтерактивна карта</p>
+                        <small>Тут буде розміщена Google Maps або інша картографічна служба</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="social-section" data-aos="fade-up">
+                <h3>Слідкуйте за нами</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook" data-social="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link instagram" data-social="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link telegram" data-social="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="#" class="social-link viber" data-social="Viber">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Action Button -->
+        <div class="fab-container">
+            <button class="fab" id="fabButton">
+                <i class="fas fa-phone"></i>
+            </button>
+            <div class="fab-options" id="fabOptions">
+                <a href="tel:+380441234567" class="fab-option">
+                    <i class="fas fa-phone"></i>
+                    <span>Телефон</span>
+                </a>
+                <a href="mailto:info@autosalon.ua" class="fab-option">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="fab-option">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
 </body>
 </html>
