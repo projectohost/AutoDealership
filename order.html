@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Автосалон - Оформлення</title>
+  <link rel="stylesheet" href="order.css" />
+   <link rel="stylesheet" href="./styles.css">
+    <!-- Іконки Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header>
+        <div class="logo"><i class="fa-solid fa-car-side"></i> CarLux</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a></li>
+                <li><a href="catalog.html"><i class="fa-solid fa-list"></i> Каталог</a></li>
+                <li><a href="order.html"><i class="fa-solid fa-truck"></i> Замовити</a></li>
+                <li><a href="contacts.html"><i class="fa-solid fa-box"></i> Контакти</a></li>
+             </ul>
+        </nav>
+    </header>
+  <div class="wrapper">
+    <h1>Оформлення Автомобіля</h1>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="Ваше ім'я" required />
+      <input type="tel" id="phone" placeholder="Номер телефону" required />
+      <input type="email" id="email" placeholder="Ел. пошта" required />
+
+      <select id="car" required>
+        <option value="">Оберіть модель</option>
+        <option value="Tesla Model S">Tesla Model S</option>
+        <option value="BMW M5">BMW M5</option>
+        <option value="Audi RS7">Audi RS7</option>
+      </select>
+
+      <label class="color-label">🎨 Оберіть колір:</label>
+      <input type="color" id="color" />
+
+      <input type="date" id="date" required />
+
+      <button type="submit">Підтвердити замовлення</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
+  <script src="order.js"></script>
+</body>
+</html>
